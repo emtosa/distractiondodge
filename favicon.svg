@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="8" fill="#4f46e5"/>
+  <!-- Head -->
+  <circle cx="16" cy="10" r="5" fill="#fde68a"/>
+  <!-- Headband -->
+  <rect x="11" y="8" width="10" height="3" rx="1.5" fill="#7c3aed"/>
+  <!-- Body -->
+  <rect x="13" y="15" width="6" height="8" rx="2" fill="#1e1b4b"/>
+  <!-- Arms -->
+  <rect x="8" y="16" width="5" height="2.5" rx="1.2" fill="#1e1b4b"/>
+  <rect x="19" y="16" width="5" height="2.5" rx="1.2" fill="#1e1b4b"/>
+  <!-- Legs -->
+  <rect x="13" y="22" width="2.5" height="5" rx="1.2" fill="#1e1b4b"/>
+  <rect x="16.5" y="22" width="2.5" height="5" rx="1.2" fill="#1e1b4b"/>
+</svg>
