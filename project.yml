@@ -1,0 +1,72 @@
+name: DistractionDodge
+options:
+  bundleIdPrefix: com.foculoom
+  deploymentTarget:
+    iOS: "17.0"
+  xcodeVersion: "16.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "20260226.1"
+    SWIFT_VERSION: "6.0"
+    TARGETED_DEVICE_FAMILY: "1,2"
+
+targets:
+  DistractionDodge:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: Sources/DistractionDodge
+    dependencies:
+      - sdk: SpriteKit.framework
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.foculoom.distractiondodge
+        PRODUCT_NAME: "Distraction Dodge"
+        PRODUCT_MODULE_NAME: DistractionDodge
+        INFOPLIST_FILE: Sources/DistractionDodge/Info.plist
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        DEVELOPMENT_TEAM: "RZWT5WST77"
+        CODE_SIGN_STYLE: Automatic
+
+  DistractionDodgeTests:
+    type: bundle.unit-test
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: Tests/DistractionDodgeTests
+    dependencies:
+      - target: DistractionDodge
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.foculoom.distractiondodge.tests
+        DEVELOPMENT_TEAM: "RZWT5WST77"
+        CODE_SIGN_STYLE: Automatic
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/Distraction Dodge.app/Distraction Dodge"
+        BUNDLE_LOADER: "$(TEST_HOST)"
+
+schemes:
+  DistractionDodge:
+    build:
+      targets:
+        DistractionDodge: all
+        DistractionDodgeTests: [test]
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - name: DistractionDodgeTests
+          randomExecutionOrder: true
+      coverageTargets:
+        - DistractionDodge
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release
