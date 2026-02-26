@@ -20,10 +20,9 @@ targets:
     deploymentTarget: "17.0"
     sources:
       - path: Sources/DistractionDodge
+      - path: Sources/DistractionDodge/Assets.xcassets
     dependencies:
       - sdk: SpriteKit.framework
-      - target: DistractionDodgeWatch
-        embed: true
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.foculoom.distractiondodge
@@ -58,16 +57,18 @@ targets:
     deploymentTarget: "10.0"
     sources:
       - path: Sources/DistractionDodgeWatch
+      - path: Sources/DistractionDodgeWatch/Assets.xcassets
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.foculoom.distractiondodge.watchkitapp
         PRODUCT_NAME: "Dodge"
         INFOPLIST_FILE: Sources/DistractionDodgeWatch/Info.plist
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
-        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
         DEVELOPMENT_TEAM: "RZWT5WST77"
         CODE_SIGN_STYLE: Automatic
         SWIFT_VERSION: "6.0"
+        ARCHS: "arm64_32"
+        SKIP_INSTALL: YES
         MARKETING_VERSION: "1.0.0"
         CURRENT_PROJECT_VERSION: "20260226.1"
 

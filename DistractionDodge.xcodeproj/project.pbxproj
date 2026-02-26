@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00DAFAF908A9DBBA93B96C87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0030A18AEE7872C3C2B021AB /* Assets.xcassets */; };
 		1FF6FC54BC7AC7B853E42146 /* DistractionDodgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A779A5F6F750EEB3B698DB68 /* DistractionDodgeTests.swift */; };
-		2411D4A610FF500FEEF81327 /* DistractionDodgeWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = BD45ECD45784A046324004C4 /* DistractionDodgeWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		248D878CADA255E80F1C705A /* ScreenshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576022387D7E78B6CADFB380 /* ScreenshotTests.swift */; };
 		2A0DDABD8B5D79824A9AC067 /* WatchScreenshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A8FC4D6373798B7DBC150 /* WatchScreenshotTests.swift */; };
 		39E78B73F97BE015DB3AC512 /* PlayerProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7335EBD214465597790894F /* PlayerProgress.swift */; };
@@ -27,13 +27,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2D617B0693EEDB9D398B238E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B8D36EEC15D1A03EED53DFB9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DC9F5598E19770433D83B969;
-			remoteInfo = DistractionDodgeWatch;
-		};
 		30750A1B78116148D6AF427F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B8D36EEC15D1A03EED53DFB9 /* Project object */;
@@ -43,21 +36,8 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		A091589C118342355AF6621F /* Embed Watch Content */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
-			dstSubfolderSpec = 16;
-			files = (
-				2411D4A610FF500FEEF81327 /* DistractionDodgeWatch.app in Embed Watch Content */,
-			);
-			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		0030A18AEE7872C3C2B021AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0959FB4DFA7D94B03D7210BA /* DistractionDodgeTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = DistractionDodgeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		198D9C1DCD5CD3170919C02D /* DistractionDodgeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistractionDodgeApp.swift; sourceTree = "<group>"; };
 		2EF3C7DC0D4A5194B7A4A051 /* GameConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameConfig.swift; sourceTree = "<group>"; };
@@ -171,6 +151,7 @@
 		9E9E1947996F5C46FEFBE557 /* DistractionDodge */ = {
 			isa = PBXGroup;
 			children = (
+				0030A18AEE7872C3C2B021AB /* Assets.xcassets */,
 				5969EB1750B14520ACC2F9EE /* ContentView.swift */,
 				198D9C1DCD5CD3170919C02D /* DistractionDodgeApp.swift */,
 				96A31489764C9E18D91CA4EA /* Info.plist */,
@@ -208,13 +189,12 @@
 			buildConfigurationList = A144F15F307FD3BC288565EB /* Build configuration list for PBXNativeTarget "DistractionDodge" */;
 			buildPhases = (
 				2A9E06DCF602FF2AC00B722B /* Sources */,
+				B53F50666A9265A740CC3557 /* Resources */,
 				BCCDB67B436106C1F0416C46 /* Frameworks */,
-				A091589C118342355AF6621F /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5FF0416852453E15A111455B /* PBXTargetDependency */,
 			);
 			name = DistractionDodge;
 			packageProductDependencies = (
@@ -312,6 +292,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B53F50666A9265A740CC3557 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00DAFAF908A9DBBA93B96C87 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -358,11 +346,6 @@
 			target = 29D7A6BE623B7295B9386FAB /* DistractionDodge */;
 			targetProxy = 30750A1B78116148D6AF427F /* PBXContainerItemProxy */;
 		};
-		5FF0416852453E15A111455B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DC9F5598E19770433D83B969 /* DistractionDodgeWatch */;
-			targetProxy = 2D617B0693EEDB9D398B238E /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -400,7 +383,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 20260226.1;
+				CURRENT_PROJECT_VERSION = 20260225.5;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -465,7 +448,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 20260226.1;
+				CURRENT_PROJECT_VERSION = 20260225.5;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -574,10 +557,10 @@
 		696FFB270F7796494C316649 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = arm64_32;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20260226.1;
+				CURRENT_PROJECT_VERSION = 20260225.5;
 				DEVELOPMENT_TEAM = RZWT5WST77;
 				INFOPLIST_FILE = Sources/DistractionDodgeWatch/Info.plist;
 				MARKETING_VERSION = 1.0.0;
@@ -594,10 +577,10 @@
 		9CB1483609AF83AC746F4414 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = arm64_32;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20260226.1;
+				CURRENT_PROJECT_VERSION = 20260225.5;
 				DEVELOPMENT_TEAM = RZWT5WST77;
 				INFOPLIST_FILE = Sources/DistractionDodgeWatch/Info.plist;
 				MARKETING_VERSION = 1.0.0;
