@@ -35,6 +35,20 @@
                ReferencedContainer = "container:DistractionDodge.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DC9F5598E19770433D83B969"
+               BuildableName = "DistractionDodgeWatch.app"
+               BlueprintName = "DistractionDodgeWatch"
+               ReferencedContainer = "container:DistractionDodge.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
