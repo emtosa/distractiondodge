@@ -37,6 +37,7 @@
     </a>
     <ul class="nav-links">
       <li><a href="#features">Features</a></li>
+      <li><a href="#try">Try It</a></li>
       <li><a href="#privacy">Privacy</a></li>
       <li><a href="#download">Download</a></li>
       <li><a href="support.html">Support</a></li>
@@ -112,6 +113,80 @@
   </div>
 </section>
 
+<!-- ── Try It ── -->
+<section id="try" class="try-section">
+  <div class="container">
+    <div class="features-header">
+      <h2>▶ Try It</h2>
+      <p>Tap the target. Ignore the noise.</p>
+    </div>
+    <div class="demo-wrapper">
+      <!-- Target type indicator -->
+      <p id="demo-target-label" class="demo-target-label" aria-live="polite">&nbsp;</p>
+
+      <!-- Canvas + overlay -->
+      <div class="demo-canvas-wrap">
+        <canvas id="demo-canvas" width="400" height="400" aria-label="Focus training game canvas"></canvas>
+        <div id="demo-overlay" class="demo-overlay">
+          <button id="demo-start-btn" class="btn btn-highlight">▶ Start Round</button>
+        </div>
+      </div>
+
+      <!-- Stats row -->
+      <div class="demo-stats">
+        <div class="demo-stat">
+          <span class="demo-stat-label">Time</span>
+          <span id="demo-timer" class="demo-stat-value">0:30</span>
+        </div>
+        <div class="demo-stat">
+          <span class="demo-stat-label">Accuracy</span>
+          <span id="demo-accuracy" class="demo-stat-value">—</span>
+        </div>
+      </div>
+
+      <!-- Calm Meter -->
+      <div class="calm-meter-wrap">
+        <div class="calm-meter-header">
+          <span>Calm Meter</span>
+          <span id="demo-calm-pct">0%</span>
+        </div>
+        <div class="calm-meter-track">
+          <div id="demo-calm-bar" class="calm-meter-bar"></div>
+        </div>
+      </div>
+
+      <!-- Focus Ninja SVG -->
+      <div id="demo-ninja" class="demo-ninja frantic" aria-label="Focus Ninja — frantic state">
+        <svg viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg" width="80" height="88" aria-hidden="true" focusable="false">
+          <!-- Head -->
+          <circle cx="50" cy="18" r="11" fill="#1c1917"/>
+          <!-- Headband -->
+          <rect x="39" y="13" width="22" height="6" rx="3" fill="#7c3aed"/>
+          <!-- Eyes -->
+          <rect x="43" y="15" width="5" height="4" rx="1.5" fill="#fde68a"/>
+          <rect x="52" y="15" width="5" height="4" rx="1.5" fill="#fde68a"/>
+          <!-- Body -->
+          <line x1="50" y1="29" x2="50" y2="65" stroke="#1c1917" stroke-width="5" stroke-linecap="round"/>
+          <!-- Frantic arms (pointing outward/up) -->
+          <g class="arms-frantic">
+            <line x1="50" y1="42" x2="15" y2="29" stroke="#1c1917" stroke-width="4" stroke-linecap="round"/>
+            <line x1="50" y1="42" x2="85" y2="29" stroke="#1c1917" stroke-width="4" stroke-linecap="round"/>
+          </g>
+          <!-- Calm arms (pointing down) -->
+          <g class="arms-calm">
+            <line x1="50" y1="42" x2="28" y2="64" stroke="#1c1917" stroke-width="4" stroke-linecap="round"/>
+            <line x1="50" y1="42" x2="72" y2="64" stroke="#1c1917" stroke-width="4" stroke-linecap="round"/>
+          </g>
+          <!-- Legs -->
+          <line x1="50" y1="65" x2="33" y2="96" stroke="#1c1917" stroke-width="5" stroke-linecap="round"/>
+          <line x1="50" y1="65" x2="67" y2="96" stroke="#1c1917" stroke-width="5" stroke-linecap="round"/>
+        </svg>
+        <span class="ninja-label">Focus Ninja</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ── Privacy ── -->
 <section id="privacy" class="privacy-section">
   <div class="container">
@@ -175,5 +250,6 @@
   </div>
 </footer>
 
+<script src="js/demo.js"></script>
 </body>
 </html>
