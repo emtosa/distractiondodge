@@ -661,3 +661,11 @@ footer {
 @media (max-width: 460px) {
   .demo-stats { gap: 24px; }
 }
+
+.footer-disclaimer {
+  font-size: .72rem;
+  color: var(--stone-400, #a8a29e);
+  margin-top: .75rem;
+  text-align: center;
+  opacity: .8;
+}
