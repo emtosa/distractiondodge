@@ -7,22 +7,16 @@ Marketing website for the Distraction Dodge: Focus Ninja iOS app.
 
 Built with plain HTML/CSS. No build tools required.
 
-### Running demo.js tests manually
+### Unit tests
 
-To run tests for `demo.js`:
+The interactive demo in `js/demo.js` is covered by Jest tests.
 
-1. **Setup:**
-   - Install Node.js (v18+ recommended).
-   - Run `npm install` in the project directory.
-2. **Test requirements:**
-   - Install `jest` and `jsdom`: `npm install --save-dev jest jsdom`
-   - If using ES modules, add `"type": "module"` to `package.json`.
-3. **Running tests:**
-   - Run `npx jest` or `npm test`.
-   - Ensure test files are named `demo.test.js` or similar.
-4. **Troubleshooting:**
-   - ES module errors? Check Node version and package.json config.
-   - Browser-only code may require `jsdom` mocks or cannot be fully tested in Node.
+```sh
+# Install dependencies (jest and jsdom are included in package.json)
+npm install
 
-### Limitations
-- `demo.js` is browser-focused; Node.js tests may not cover all features.
+# Run tests
+npm test
+```
+
+Coverage is written to `coverage/`. Tests use [jsdom](https://github.com/jsdom/jsdom) to simulate the browser DOM in Node.js.
